@@ -2,9 +2,15 @@ name: execute-draw
 on:
   push:
     branches: [master]
+permissions:
+  contents: write
+env:
+  BOT_NAME: "drawbot"
+  BOT_EMAIL: "drawbot@noemail.com"
 
 jobs:
   execute_draw:
+    if: "!contains(github.event.head_commit.author, 'drawbot')"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
@@ -19,3 +25,10 @@ jobs:
         with:
           inputDir: ./lists
           outputDir: ./draws
+      - name: Commit 🔐
+        run: |
+          git config --global user.name $BOT_NAME
+          git config --global user.email $BOT_EMAIL
+          git add .
+          git commit -m "updated hashes"
+          git push
