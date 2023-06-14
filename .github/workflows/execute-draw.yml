@@ -7,7 +7,7 @@ jobs:
   execute_draw:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️u
+      - name: Checkout 🛎️
         uses: actions/checkout@v3
 
       - name: Install nodejs 🔧
@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: latest
       - name: Draw 🎲
-        uses: drand/draw-action@v0.0.2
+        uses: drand/draw-action@v0.0.3
         with:
           inputDir: ./lists
           outputDir: ./draws
