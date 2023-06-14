@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: latest
       - name: Draw 🎲
-        uses: drand/draw-action@v0.0.4
+        uses: drand/draw-action@v0.0.5
         with:
           inputDir: ./lists
           outputDir: ./draws
