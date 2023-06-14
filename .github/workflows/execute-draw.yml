@@ -1,0 +1,20 @@
+name: execute-draw
+on:
+  push:
+    branches: [master]
+
+jobs:
+  execute_draw:
+    runs-on: ubuntu-latest
+      - name: Checkout 🛎️u
+        uses: actions/checkout@v3
+
+      - name: Install nodejs 🔧
+        uses: actions/setup-node@v3
+        with:
+          node-version: latest
+      - name: Draw 🎲
+        uses: drand/draw-action@v0.0.1
+        with:
+          inputDir: ./lists
+          outputDir: ./draws
