@@ -1,1 +1,0 @@
-{"round":3043795,"hashedInput":"fe85cd38568a7bc7dc791bf38cd0ebbb298730c576e2646c30bdee67d80ec3cd","winners":[""],"randomness":"57d90309208f634906d63c57e53972883de9898f44efa3ad2b8bbee1b6a8e90a"}
